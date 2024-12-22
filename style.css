@@ -1,4 +1,12 @@
+/* Sri Krishna */
+
+/* START --- ALL LINKS */
+
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* END --- ALL LINKS */
+
+/* START --- BASIC OR DEFAULT STYLING */
 
 *{
     padding : 0;
@@ -29,6 +37,12 @@ html{
     }
 }
 
+@media screen and (min-width:156em){
+    html{
+        font-size : 65px; 
+    }
+}
+
 a{
     text-decoration : none;
 }
@@ -37,18 +51,31 @@ li{
     list-style-type: none;
 }
 
+/* END --- BASIC OR DEFAULT STYLING */
+
+/* START --- INDEX.PHP */
+
 .logo{
     left:2%; 
     position:absolute;
     top: 50%;
     transform: translateY(-50%);
-    height:90px;
+    height:60px;
+}
+
+@media screen and (max-width: 43.75em){
+.logo{
+    height:40px;
+}
+.cartNavLogo{
+    height:25px;
+}
 }
 
 .navigationBar{
     position:relative;
     background-color : #cde5d9;
-    height :3rem;
+    height :3.5rem;
     max-width: 100%; 
     display:flex; 
     align-items: center;
@@ -74,3 +101,54 @@ li{
     border:none;
     font-size:0.8rem;
 }
+
+.menuBtn{
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2%;
+    display:none;
+    
+}
+
+@media screen and (max-width: 43.75em){
+    .menuBtn{
+        display:inline-block;
+    }
+    .navBarElesCollection li:nth-child(-n+3){
+        display:none;
+    }
+    .navBarElesCollection{
+        right:3rem;
+    }
+}
+
+.navigationBarPhn{ 
+    width:45%;
+    height:90vh;
+    background-color: #cde5d9;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 2rem 0 0 0;
+    font-size:1.2rem;
+    font-weight: 400;
+    z-index:1;
+    border: 2px solid #b6b4c2 ;
+    display:none;
+}
+
+
+/* END --- INDEX.PHP */
+
+
+
+/* START --- INDEX.PHP */
+
+
+
+
+/* END --- INDEX.PHP */
+
+/* Sri Krishna */
