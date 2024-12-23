@@ -19,6 +19,8 @@
 
 body{
     background-color : #f2ebcc;
+    padding : 0;
+    margin : 0;
 }
 
 html{
@@ -86,6 +88,7 @@ li{
     display : inline-flex;
     gap: 1rem;
     right: 2%;
+    color:blue;
 }
 
 .navBarEles{
@@ -135,12 +138,24 @@ li{
     font-size:1.2rem;
     font-weight: 400;
     z-index:1;
-    border: 2px solid #b6b4c2 ;
+    border: 2px solid #b6b4c2;
     display:none;
 }
 
+.sectionOne{
+    background-color: #cde5d9;
+    height: 30vh;
+    max-width: 100%;
+    margin: 3rem 0.5rem;
+    border-radius:0.5rem;
+    border: 0.2rem solid black;
+    
+}
+
+
 
 /* END --- INDEX.PHP */
+
 
 
 
