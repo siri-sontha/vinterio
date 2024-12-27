@@ -99,15 +99,80 @@
 
     <section class="sectionThree">
 
-        <div class="product">
-            <img src="images/f3.jpg" alt="Product">
-            div.proDeta
-            <h1>Shree Medha</h1>
-            <h2>Multicolor Shirt</h2>
-            <h3>$899</h3>
-        </div>
+    <?php
+    include 'config.php';
+    $display_pro = mysqli_query($con, "SELECT * FROM `union`.`productstable` LIMIT 6");
+    if(mysqli_num_rows($display_pro)>0){
+
+        while($proDetails = mysqli_fetch_assoc($display_pro)){
+            $proCode = $proDetails['proCode'];
+            $proName = $proDetails['proName'];
+            $proPrice = $proDetails['proPrice'];
+            $proImg = $proDetails['proImage'];
+    ?>
+
+        <div class="product" onclick="window.location.href='products.php?slno=<?php echo $pro_id; ?>'">
+             <img src="proImages/<?php echo $proImg ?>" alt="Product" class="proImage">
+            <div class="proDesc">
+                <div class="proDetails">
+                    <h1 class="brand">Shree Medha</h1>
+                    <h2 class="proName"><?php echo $proName ?></h2>
+                    <h3 class="proPrice"><?php echo $proPrice ?></h3>
+                </div>
+                <div class="cartIconDiv">
+                    <img src="images/cart-shopping-solid.svg" alt="Cart icon" class="cartIcon">
+                </div>
+            </div>
+        </div>    
+    
+    <?php
+        }
+    }
+    ?>    
+
+
 
     </section>
+
+
+    <footer class="last-sec">
+
+        <div class="contact">
+            <h3 class="cnt-txt1">Contact</h3>
+            <h4 class="cnt-txt"><strong>Address:</strong> SMDC, Fort Road, Bellary</h4>
+            <h4 class="cnt-txt"><strong>Phone:</strong> +91 0000000000</h4>
+            <h4 class="cnt-txt"><strong>Hours:</strong> 8:30 to 4:30, Mon-Sat</h4>
+            <div class="uni-onLogo">
+            <img alt="Uni-On" src="images/logo4.png" class="Uni-ON">
+            </div>
+        </div>
+
+        <div class="about">
+            <h3 class="cnt-txt1">About</h3>
+            <h4 class="cnt-txt"><a href="#">About Us</a></h4>
+            <h4 class="cnt-txt"><a href="#">Delivery Information</a></h4>
+            <h4 class="cnt-txt"><a href="#">Privacy Policy</a></h4>
+            <h4 class="cnt-txt"><a href="#">Terms & Conditions</a></h4>
+            <h4 class="cnt-txt"><a href="#">Contact Us</a></h4>
+            <h3 class="cnt-txt2">@2024, UNION, SMDC</h3>
+        </div>
+
+        <div class="acc">
+            <h3 class="cnt-txt1">Account</h3>
+            <h4 class="cnt-txt"><a href="#">Sign In</a></h4>
+            <h4 class="cnt-txt"><a href="#">Log In</a></h4>
+            <h4 class="cnt-txt"><a href="#">View Cart</a></h4>
+            <h4 class="cnt-txt"><a href="#">Help</a></h4>
+        </div>
+
+         <div class="payment">
+                <h3 class="cnt-txt1">Payment</h3>
+                <div class="payImg">
+                <a href="#"><img src="images/pay.png" class="pay"></a>
+                </div>
+        </div>
+
+    </footer>    
 
     <script src="script.js"></script>
 </body>
