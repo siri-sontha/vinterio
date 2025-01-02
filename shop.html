@@ -36,102 +36,11 @@
      </nav>
     </header>
 
-    <section class="sectionOne">
-        <div class="text">
-            <h1>UNION FLASH SALE</h1>
-            <h2>STUDENT SUPPLIES AT YOUR DOOR STEP</h1>
-            <button>SHOP NOW</button>
+    <section class="shopLandingCard">
+        <div class="landingTitle">
+            <h1 class="landingTitleText">YOUR ONE STOP SHOP FOR CAMPUS ESSENTIALS</h1>
         </div>
-
-        <div class="image">
-            <img src="images/uniformGirlimage.png" alt="Image" class="image">
-        </div>
-    </section>
-
-    <div class="title">
-        <h1 class="bigText">FEATURES</h1>
-        <h2 class="smallText">REASONS WHY YOU WILL ENJOY SHOPPING FROM US</h2>
-    </div>
-
-    <section class="sectionTwo">
-
-    <div class="featureCard">
-        <img src="images/f2.png" alt="Online Order">
-        <div class="featureTitleOne">
-            <h2 class="featureTitleText">Online Order</h2>
-        </div>
-    </div>
-
-    <div class="featureCard">
-        <img src="images/f7.png" alt="Online Order">
-        <div class="featureTitleTwo">
-            <h2 class="featureTitleText">Save Money</h2>
-        </div>
-    </div>
-
-    <div class="featureCard">
-        <img src="images/f4.png" alt="Online Order">
-        <div class="featureTitleThree">
-            <h2 class="featureTitleText">Super Offers</h2>
-        </div>
-    </div>
-
-    <div class="featureCard">
-        <img src="images/f5.png" alt="Online Order">
-        <div class="featureTitleFour">
-            <h2 class="featureTitleText">Happy Sell</h2>
-        </div>
-    </div>
-
-    <div class="featureCard">
-        <img src="images/f6.png" alt="Online Order">
-        <div class="featureTitleFive">
-            <h2 class="featureTitleText">24/7 Support</h2>
-        </div>
-    </div>
-
-    </section>
-
-    <div class="title">
-        <h1 class="bigText">OUR PRODUCTS</h1>
-        <h2 class="smallText">HOT DEALS YOU CAN'T MISS ON UNION</h2>
-    </div>
-
-    <section class="sectionThree">
-
-    <?php
-    include 'config.php';
-    $display_pro = mysqli_query($con, "SELECT * FROM `union`.`productstable` LIMIT 6");
-    if(mysqli_num_rows($display_pro)>0){
-
-        while($proDetails = mysqli_fetch_assoc($display_pro)){
-            $proCode = $proDetails['proCode'];
-            $proName = $proDetails['proName'];
-            $proPrice = $proDetails['proPrice'];
-            $proImg = $proDetails['proImage'];
-    ?>
-
-        <div class="product" onclick="window.location.href='products.php?slno=<?php echo $pro_id; ?>'">
-             <img src="proImages/<?php echo $proImg ?>" alt="Product" class="proImage">
-            <div class="proDesc">
-                <div class="proDetails">
-                    <h1 class="brand">Shree Medha</h1>
-                    <h2 class="proName"><?php echo $proName ?></h2>
-                    <h3 class="proPrice"> ₹<?php echo $proPrice ?></h3>
-                </div>
-                <div class="cartIconDiv">
-                    <img src="images/cart-shopping-solid.svg" alt="Cart icon" class="cartIcon">
-                </div>
-            </div>
-        </div>    
-    
-    <?php
-        }
-    }
-    ?>    
-
-
-
+        
     </section>
 
     <footer class="last-sec">

@@ -190,6 +190,7 @@ li{
     border-radius: 1vh;
     font-size: clamp(0.6rem, 3vw, 8rem);
     margin: 4% 0 0 0;
+    color: white;
 }
 
 .closeBtn{
@@ -272,7 +273,7 @@ li{
 .sectionThree{
     margin: 6% 4%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(4rem, 9.2rem));
+    grid-template-columns: repeat(auto-fit, minmax(4rem, 9.8rem));
     gap: 2rem;
     justify-content: center;
     justify-content: space-evenly;
@@ -297,7 +298,7 @@ li{
     border: 0.01rem solid grey;
     text-align: center;
     box-shadow: 2px 2px 2px grey;
-    margin:0.5rem;
+    margin:0.8rem;
     
 }
 
@@ -314,22 +315,22 @@ li{
 }
 
 .brand{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 200;
     line-height: 0;
     padding: 0 0 1rem 0.5rem;
 }
 
 .proName{
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     line-height: 0;
     padding: 0 0 1.2rem 0.5rem;
 }
 
 .proPrice{
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 35px;
+    font-weight: 600;
     line-height: 0;
     padding: 0 0 1rem 0.5rem;
 }
@@ -337,10 +338,10 @@ li{
 .last-sec{
     max-width:100%;
     background-color: #cde5d9;
-    padding:2% 0.5rem;
+    padding:2% 2%;
     display:flex;
-   justify-content: center;
-   justify-content: space-evenly;
+    justify-content: center;
+    justify-content: space-evenly;
     
 }
 
@@ -349,11 +350,12 @@ li{
     font-size: clamp(0.2rem, 2vw, 0.8rem);
     font-weight: 400;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 .cnt-txt1{
     color: black;
-    font-size: clamp(0.5rem, 4vw, 1.5rem);
+    font-size: clamp(0.1rem, 2vw, 2.5rem);
     font-weight: 1000;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 
@@ -379,7 +381,7 @@ li{
 
 .Uni-ON{
     margin-top:3rem;
-    width: 100px;
+    width: 150px;
 }
 
 /* END --- INDEX.PHP */
@@ -432,6 +434,34 @@ li{
     border-radius: 3vh;
 }
 
+.shopLandingCard{
+    background-color: #e5c1cd;
+    max-width: 100%;
+    margin: 6% 3% 6% 3%;
+    height: 80vh;
+    border: 0.01rem solid grey;
+    border-radius: 0.3rem;
+    box-shadow: 2px 2px 1.9px grey;
+    position: relative;
+    padding: 5% 0% 0 4%; 
+    
+}
+
+.landingTitle{
+    background-color: #f7dde8;
+    max-width: 50%;
+    position: absolute;
+    border: 0.06rem solid white;
+    border-radius: 0.5rem;
+    padding: 2%;
+    box-shadow: 4px 4px 4.9px grey;
+   
+}
+
+.landingTitleText{
+    color: #675d5d;
+    font-size: clamp(0.1rem, 6vh, 4rem);
+}
 /* --------END OF CSS FOR LOGIN.HTML & ADMIN.HTML  & CHECKOUT.HTML------------- */
 
 /* Sri Krishna */
