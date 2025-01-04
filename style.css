@@ -384,9 +384,9 @@ li{
     width: 150px;
 }
 
-/* END --- INDEX.PHP */
+/* END ---------- INDEX.PHP */
 
-/* --------START OF CSS FOR LOGIN.HTML & ADMIN.HTML & CHECKOUT.HTML------------- */
+/* START ---------- LOGIN.HTML & ADMIN.HTML & CHECKOUT.HTML */
 
 .addNewPro{
     display:flex;
@@ -434,23 +434,26 @@ li{
     border-radius: 3vh;
 }
 
+/* END ---------- LOGIN.HTML & ADMIN.HTML & CHECKOUT.HTML */
+
+/* START ---------- SHOP.PHP */
+
 .shopLandingCard{
     background-color: #e5c1cd;
     max-width: 100%;
     margin: 6% 3% 6% 3%;
-    height: 80vh;
     border: 0.01rem solid grey;
     border-radius: 0.3rem;
     box-shadow: 2px 2px 1.9px grey;
-    position: relative;
-    padding: 5% 0% 0 4%; 
-    
+    padding: 4% 0 0% 5%; 
+    display: flex;
+    justify-content: space-evenly;   
+   
 }
 
 .landingTitle{
     background-color: #f7dde8;
-    max-width: 50%;
-    position: absolute;
+    max-width: 60vw;
     border: 0.06rem solid white;
     border-radius: 0.5rem;
     padding: 2%;
@@ -460,8 +463,64 @@ li{
 
 .landingTitleText{
     color: #675d5d;
-    font-size: clamp(0.1rem, 6vh, 4rem);
+    font-size: clamp(2rem, 6vh, 4rem);
 }
-/* --------END OF CSS FOR LOGIN.HTML & ADMIN.HTML  & CHECKOUT.HTML------------- */
+
+@media screen and (max-width: 121.875em){
+    .landingTitleText{
+        font-size: clamp(2rem, 4vh, 4rem);
+    }
+}
+
+@media screen and (max-width: 81.6875em){
+    .landingTitleText{
+        font-size: clamp(0.5rem, 3vh, 4rem);
+    }
+}
+
+.shopLandingCard img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.landingImg{
+    max-width: 1000px;
+    max-height: 500px;
+   
+}
+
+.whatToShopText{
+    font-size: clamp(1rem, 6vh, 3rem);
+    font-weight: 400;
+    margin-top: 8%;
+    margin-bottom: 3%;
+}
+
+.landingEles{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.landingCategories{
+    display: flex;
+    gap: 2%;
+}
+
+.landingCategories button{
+    background-color: #b6b4c2;
+    padding:0.8% 1%;
+    max-width: clamp(3rem, 24vw, 45rem);
+    font-size: clamp(0.5rem, 6vh, 3rem);
+    border-radius: 0.3rem;
+    color: white;
+    border: 0.5px solid grey;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 3px grey;
+    margin-bottom: 6%;
+}
+
+/* END ---------- SHOP.PHP */
 
 /* Sri Krishna */
