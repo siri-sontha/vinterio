@@ -561,6 +561,51 @@ li{
    
 }
 
+.contactUs{
+    background-color: #c6e2e7;
+    max-width: 100%;
+    margin: 0 2% 8% 2%;
+    border: 2px solid white;
+    border-radius: 0.8rem;
+    padding: 5% 4%;
+    display: flex;
+    gap: 10%;
+}
+
+.leaveMsgText{
+    font-size: clamp(1.25rem, 4.5vw, 2.5rem);
+    color: white;
+    text-transform: uppercase;
+}
+
+.leaveMsgDiv{
+    max-width: 80%;
+    
+}
+
+.inputBox{
+    max-width: 100%;
+    background-color: #e5c1cd;
+    border: 1px solid #808080;
+    border-radius: 0.5rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    margin-bottom: 2%;
+    display: flex;
+}
+
+.leaveMsgImgs img{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 25%;
+}
+
+.leaveMsgImgs{
+    max-width: 10%;
+}
+
 /* END ---------- ABOUT.PHP */
 
 /* Sri Krishna */
