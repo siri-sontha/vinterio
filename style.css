@@ -564,46 +564,71 @@ li{
 .contactUs{
     background-color: #c6e2e7;
     max-width: 100%;
-    margin: 0 2% 8% 2%;
-    border: 2px solid white;
+    margin: 0 3% 8% 3%;
+    border: 3px solid white;
     border-radius: 0.8rem;
-    padding: 5% 4%;
+    padding: 5% 4%;   
+}
+
+.contactUsFlex{
     display: flex;
     gap: 10%;
 }
 
 .leaveMsgText{
-    font-size: clamp(1.25rem, 4.5vw, 2.5rem);
+    font-size: clamp(1.75rem, 5.5vw, 3.5rem);
+
     color: white;
     text-transform: uppercase;
 }
 
 .leaveMsgDiv{
-    max-width: 80%;
-    
+    width: 70%; 
 }
 
 .inputBox{
-    max-width: 100%;
+    all: unset;
+    width: 100%;
+    height: 2.5rem;
     background-color: #e5c1cd;
-    border: 1px solid #808080;
-    border-radius: 0.5rem;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 1%;
-    margin-bottom: 2%;
-    display: flex;
+    border: 2px solid #808080;
+    border-radius: 0.4rem;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    padding-left: 3%;
+    margin-bottom: 4%;
+    font-size: clamp(0.8rem, 3vw, 1.5rem);
+    font-weight: 1000;
+    color: white;
+   
+   
+}
+
+.inputBox::placeholder{
+    color: white; 
+    opacity: 1;
+}
+
+.inputBox:nth-child(3){
+    height: 4rem;
+}
+
+.inputBox:nth-child(4){
+    height: 7rem;
 }
 
 .leaveMsgImgs img{
     display: flex;
     flex-direction: column;
-    max-width: 100%;
-    max-height: 25%;
+    width: 100%;
+    max-height: 15%;
 }
 
 .leaveMsgImgs{
-    max-width: 10%;
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
 }
 
 /* END ---------- ABOUT.PHP */
