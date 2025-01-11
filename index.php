@@ -101,7 +101,7 @@
 
     <?php
     include 'config.php';
-    $display_pro = mysqli_query($con, "SELECT * FROM `union`.`productstable` LIMIT 6");
+    $display_pro = mysqli_query($con, "SELECT * FROM `union`.`productstable` LIMIT 8");
     if(mysqli_num_rows($display_pro)>0){
 
         while($proDetails = mysqli_fetch_assoc($display_pro)){

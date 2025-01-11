@@ -122,7 +122,41 @@
     <div class="title">
         <h1 class="bigText">OUR PRODUCTS</h1>
         <h2 class="smallText">HOT DEALS YOU CAN'T MISS ON UNION</h2>
-    </div>   
+    </div>  
+    
+    <section class="sectionThree">
+
+        <?php
+        include 'config.php';
+        $display_pro = mysqli_query($con, "SELECT * FROM `union`.`productstable` LIMIT 8");
+        if(mysqli_num_rows($display_pro)>0){
+    
+            while($proDetails = mysqli_fetch_assoc($display_pro)){
+                $proCode = $proDetails['proCode'];
+                $proName = $proDetails['proName'];
+                $proPrice = $proDetails['proPrice'];
+                $proImg = $proDetails['proImage'];
+        ?>
+    
+            <div class="product" onclick="window.location.href='products.php?slno=<?php echo $pro_id; ?>'">
+                 <img src="proImages/<?php echo $proImg ?>" alt="Product" class="proImage">
+                <div class="proDesc">
+                    <div class="proDetails">
+                        <h1 class="brand">Shree Medha</h1>
+                        <h2 class="proName"><?php echo $proName ?></h2>
+                        <h3 class="proPrice"> ₹<?php echo $proPrice ?></h3>
+                    </div>
+                    <div class="cartIconDiv">
+                        <img src="images/cart-shopping-solid.svg" alt="Cart icon" class="cartIcon">
+                    </div>
+                </div>
+            </div>    
+        
+        <?php
+            }
+        }
+        ?>    
+        </section>
 
 
     <footer class="last-sec">
