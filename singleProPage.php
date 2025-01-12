@@ -11,41 +11,34 @@
 </head>
 <body class="body">
 
-    <header>
-        <div class="navbar">
+<header>
+    <nav class="navigationBar">
+       <img src="images/logo4.png" alt="UNION" class="logo">
+       <ul class="navBarElesCollection">
+            <li class="navBarEles">Shop</li>
+            <li class="navBarEles">About</li>
+            <li class="navBarEles">Contact</li>
+            <li class="navBarEles"><img src="images/shopping-cart-svgrepo-com.svg" alt="Cart" class="cartNavLogo"></li>
+            <li class="navBarEles"><button class="loginBtn">Login/Signup</button></li>
+            
+       </ul>
+       <img src="images/menu-svgrepo-com.svg" alt="Menu Button" class="menuBtn">
+    </nav>
 
-            <img src="logo2.png" alt="Uni-On" class="logo">
-
-            <div class="nav-ele">
-            <ul>
-                <li class="nav-ele-li"><a href="index.php">Home</a></li>
-                <li class="nav-ele-li"><a href="shop.php">Shop</a></li>
-                <li class="nav-ele-li"><a href="about.php">About</a></li>
-                <li class="nav-ele-li"><a href="about.html#contactUs">Contact</a></li>
-                <li class="nav-ele-li"><a href="cart.php"><img src="shopping-cart-svgrepo-com.svg" alt="cart" class="cart-icon"></a></li>
-                <li class="nav-ele-li"><input class="search" type="text" placeholder="Search UNI-ON"></li>
-                <li class="nav-ele-li"><a href="login.php"><button class="log-btn">Log In/Sign Up</button></a></li>
-            </ul>
+    <nav class="navigationBarPhn">
+        <div class="closeBtn">
+            <img src="images/close-svgrepo-com.svg" alt="Cart">
+            <h1 class="closeText">close</h1>
         </div>
-        
-           <img src="menu1.svg" class="menuBtn"></li>
-
-            <div class="phnNav">
-            <ul>
-                <li><img src="close.svg" class="closeBtn"></li>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="shop.php">Shop</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="about.php#contactUs">Contact</a></li>
-                <li><a href="cart.php"><img src="shopping-cart-svgrepo-com.svg" alt="cart" class="cart-icon"></a></li>
-                <li><a href="login.php"><button class="log-btn">Log In/Sign Up</button></a></li>
-            </ul>
-        </div>
-
-        </div>
+        <ul class="navBarElesCollectionPhn">
+             <li class="navBarElesPhn">Shop</li>
+             <li class="navBarElesPhn">About</li>
+             <li class="navBarElesPhn">Contact</li>
+        </ul>
+     </nav>
     </header>
 
-	<section class="proDetails">
+	<section class="proDetailsSingle">
 
     <?php
     include 'config.php';
@@ -70,17 +63,17 @@
 
 ?>                
         
-	<div class="proImgDiv">
-        <img class="proImg" id="proImg" alt="Product 1" src="<?php echo $proImage; ?>">
-        <div class="changeImg">
-        <img class="imgOne" id="imgOne" alt="Product 1" src="<?php echo $proImgOne; ?>">
-        <img class="imgTwo" id="imgTwo" alt="Product 1" src="<?php echo $proImgTwo; ?>">
-        <img class="imgThree" id="imgThree" alt="Product 1" src="<?php echo $proImgThree; ?>">
+	<div class="proImgDivSingle">
+        <img class="proImgSingle" id="proImg" alt="Product 1" src="proImages/<?php echo $proImage; ?>">
+        <div class="changeImgSingle">
+        <img class="imgOne" id="imgOne" alt="Product 1" src="proImages/<?php echo $proImgOne; ?>">
+        <img class="imgTwo" id="imgTwo" alt="Product 2" src="proImages/<?php echo $proImgTwo; ?>">
+        <img class="imgThree" id="imgThree" alt="Product 3" src="proImages/<?php echo $proImgThree; ?>">
         </div>
     </div>	
-	<div class="proDescDiv">
-		<h1 class="proName"><?php echo $proName ?></h1>
-		<h1 class="proPrice">₹<?php echo $proPrice ?></h1>
+	<div class="proDescDivSingle">
+		<h1 class="proNameSingle"><?php echo $proName ?></h1>
+		<h1 class="proPriceSingle">₹<?php echo $proPrice ?></h1>
 		<div class="proSizes">
 			<p class="size1">XS</p>			
 			<p class="size1">S</p>	
@@ -88,13 +81,14 @@
 			<p class="size1">L</p>
 			<p class="size1">XL</p>
 		</div>
-		<div class="proQtyCart">
-			<input type="number" value="1" class="proQty" id="qtyField">
-            <button class="proCart" id="proCart"><a href="cart.php?proCode=<?php echo $proCode ?>">ADD TO CART</a></button>
+		<div class="proQtyCartSingle">
+			<input type="number" value="1" class="proQtySingle" id="qtyField">
+            <button class="proCartSingle" id="proCart"><a href="cart.php?proCode=<?php echo $proCode ?>">ADD TO CART</a></button>
 		</div>
-        <h1 class="details">Product Details</h1>
-		<div class="proDesc">
+        <h1 class="detailsSingle">Product Details</h1>
+		<div class="proDescSingle">
 			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum, corporis delectus suscipit dolore in totam dolorem atque ut minus expedita voluptates aut, nisi non nesciunt? Autem officia laborum deleniti!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione rerum, corporis delectus suscipit dolore in totam dolorem atque ut minus expedita voluptates aut, nisi non nesciunt? Autem officia laborum deleniti!
 		</div>
 	</div>
 
@@ -115,40 +109,44 @@ echo "problem";
 
 	</section>
 
-    <h1 class="our-fs2">FEATURED PRODUCTS</h1>
-    <h3 class="sub-txt">Uni-On Super Cool Collections</h3>
+    <div class="title">
+        <h1 class="bigText">MORE PRODUCTS</h1>
+        <h2 class="smallText">HOT DEALS YOU CAN'T MISS ON UNION</h2>
+    </div>
 
-<section class="featured-pros">
+    <section class="sectionThree">
 
-<?php
-include 'config.php';
-$display_pro = mysqli_query($con, "SELECT * FROM `union`.`productstable`");
-if(mysqli_num_rows($display_pro)>0){
+    <?php
+    include 'config.php';
+    $display_pro = mysqli_query($con, "SELECT * FROM `union`.`productstable` LIMIT 8");
+    if(mysqli_num_rows($display_pro)>0){
 
-    while($proDetails = mysqli_fetch_assoc($display_pro)){
-        $proCode = $proDetails['proCode'];
-        $pro_id = $proDetails['slno'];
-        $proName = $proDetails['proName'];
-        $proPrice = $proDetails['proPrice'];
-        $proImg = $proDetails['proImage'];
-?>
+        while($proDetails = mysqli_fetch_assoc($display_pro)){
+            $proCode = $proDetails['proCode'];
+            $proName = $proDetails['proName'];
+            $proPrice = $proDetails['proPrice'];
+            $proImg = $proDetails['proImage'];
+    ?>
 
-<div class="pro1" onclick="window.location.href='products.php?proCode=<?php echo $proCode; ?>'">
-<?php echo "<img class='pro1-img' alt='Product 1' src='$proImg'>" ?>
- <div class="pro-des">
-   <span class="des-txt">Shree Medha</span>
-  <?php echo "<h4 class='des-txt'>$proName</h4>" ?>
-  <?php echo "<h4 class='des-txt3'>$proPrice</h4>" ?>
-   <a href="cart.php"><img src="cart-shopping-solid.svg" class="cart"></a>
- </div>
-</div>
-
-<?php
+        <div class="product" onclick="window.location.href='products.php?slno=<?php echo $pro_id; ?>'">
+             <img src="proImages/<?php echo $proImg ?>" alt="Product" class="proImage">
+            <div class="proDesc">
+                <div class="proDetails">
+                    <h1 class="brand">Shree Medha</h1>
+                    <h2 class="proName"><?php echo $proName ?></h2>
+                    <h3 class="proPrice"> ₹<?php echo $proPrice ?></h3>
+                </div>
+                <div class="cartIconDiv">
+                    <img src="images/cart-shopping-solid.svg" alt="Cart icon" class="cartIcon">
+                </div>
+            </div>
+        </div>    
+    
+    <?php
+        }
     }
-}
-?>
-
-</section>
+    ?>    
+    </section>
     
     <footer class="last-sec">
 

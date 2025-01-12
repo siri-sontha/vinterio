@@ -71,7 +71,7 @@
                 $proImg = $proDetails['proImage'];
         ?>
     
-            <div class="product" onclick="window.location.href='singleProPage.php?slno=<?php echo $pro_id; ?>'">
+            <div class="product" onclick="window.location.href='singleProPage.php?proCode=<?php echo $proCode; ?>'">
                  <img src="proImages/<?php echo $proImg ?>" alt="Product" class="proImage">
                 <div class="proDesc">
                     <div class="proDetails">
@@ -110,7 +110,7 @@
                 $proImg = $proDetails['proImage'];
         ?>
     
-            <div class="product" onclick="window.location.href='singleProPage.php?slno=<?php echo $pro_id; ?>'">
+            <div class="product" onclick="window.location.href='singleProPage.php?proCode=<?php echo $proCode; ?>'">
                  <img src="proImages/<?php echo $proImg ?>" alt="Product" class="proImage">
                 <div class="proDesc">
                     <div class="proDetails">
@@ -149,7 +149,7 @@
                 $proImg = $proDetails['proImage'];
         ?>
     
-            <div class="product" onclick="window.location.href='singleProPage.php?slno=<?php echo $pro_id; ?>'">
+            <div class="product" onclick="window.location.href='singleProPage.php?proCode=<?php echo $proCode; ?>'">
                  <img src="proImages/<?php echo $proImg ?>" alt="Product" class="proImage">
                 <div class="proDesc">
                     <div class="proDetails">
