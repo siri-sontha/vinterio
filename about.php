@@ -13,30 +13,29 @@
     <nav class="navigationBar">
        <img src="images/logo4.png" alt="UNION" class="logo">
        <ul class="navBarElesCollection">
-            <li class="navBarEles">Shop</li>
-            <li class="navBarEles">About</li>
-            <li class="navBarEles">Contact</li>
-            <li class="navBarEles"><img src="images/shopping-cart-svgrepo-com.svg" alt="Cart" class="cartNavLogo"></li>
-            <li class="navBarEles"><button class="loginBtn">Login/Signup</button></li>
-            
+            <a href="index.php"><li class="navBarEles">Home</li></a>
+            <a href="shop.php"><li class="navBarEles">Shop</li></a>
+            <a href="cart.php"><li class="navBarEles"><img src="images/shopping-cart-svgrepo-com.svg" alt="Cart" class="cartNavLogo"></li>
+            <a href="login.php"><li class="navBarEles"><button class="loginBtn">Login/Signup</button></li></a>  
        </ul>
        <img src="images/menu-svgrepo-com.svg" alt="Menu Button" class="menuBtn">
     </nav>
 
     <nav class="navigationBarPhn">
         <div class="closeBtn">
-            <img src="images/close-svgrepo-com.svg" alt="Cart">
+            <a href="cart.php"><img src="images/close-svgrepo-com.svg" alt="Cart"></a>
+            <a href="login.php"><li class="navBarEles"><button class="loginBtn">Login/Signup</button></li></a>
             <h1 class="closeText">close</h1>
         </div>
         <ul class="navBarElesCollectionPhn">
-             <li class="navBarElesPhn">Shop</li>
-             <li class="navBarElesPhn">About</li>
-             <li class="navBarElesPhn">Contact</li>
+        <a href="index.php"><li class="navBarElesPhn">Home</li></a>
+        <a href="shop.php"><li class="navBarElesPhn">Shop</li></a>
+        <a href="about.php"><li class="navBarElesPhn">About</li></a>
         </ul>
      </nav>
     </header>
 
-    <section class="aboutUs">
+    <section class="aboutUs" id="aboutUs">
         <div class="abtUsTitleDiv">
             <h1 class="abtUsTitleText">ABOUT US</h1>
         </div>
@@ -54,7 +53,7 @@
         </div>
     </section>
 
-    <div class="abtUsTitleDiv">
+    <div class="abtUsTitleDiv" id="contactUs">
         <h1 class="abtUsTitleText">CONTACT US</h1>
     </div>
 
@@ -138,7 +137,7 @@
                 $proImg = $proDetails['proImage'];
         ?>
     
-            <div class="product" onclick="window.location.href='products.php?slno=<?php echo $pro_id; ?>'">
+            <div class="product" onclick="window.location.href='singleProPage.php?proCode=<?php echo $proCode; ?>'">
                  <img src="proImages/<?php echo $proImg ?>" alt="Product" class="proImage">
                 <div class="proDesc">
                     <div class="proDetails">
@@ -147,7 +146,7 @@
                         <h3 class="proPrice"> ₹<?php echo $proPrice ?></h3>
                     </div>
                     <div class="cartIconDiv">
-                        <img src="images/cart-shopping-solid.svg" alt="Cart icon" class="cartIcon">
+                    <a href="cart.php?proCode=<?php echo $proDetails['proCode'] ?>"><img src="images/cart-shopping-solid.svg" alt="Cart icon" class="cartIcon"></a>
                     </div>
                 </div>
             </div>    

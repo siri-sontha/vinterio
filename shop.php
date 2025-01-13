@@ -9,32 +9,33 @@
 </head>
 <body>
 
-    <header>
+<header>
     <nav class="navigationBar">
        <img src="images/logo4.png" alt="UNION" class="logo">
        <ul class="navBarElesCollection">
-            <li class="navBarEles">Shop</li>
-            <li class="navBarEles">About</li>
-            <li class="navBarEles">Contact</li>
-            <li class="navBarEles"><img src="images/shopping-cart-svgrepo-com.svg" alt="Cart" class="cartNavLogo"></li>
-            <li class="navBarEles"><button class="loginBtn">Login/Signup</button></li>
-            
+            <a href="index.php"><li class="navBarEles">Home</li></a>
+            <a href="about.php"><li class="navBarEles">About</li></a>
+            <a href="about.php#contactUs"><li class="navBarEles">Contact</li></a>
+            <a href="cart.php"><li class="navBarEles"><img src="images/shopping-cart-svgrepo-com.svg" alt="Cart" class="cartNavLogo"></li></a>
+            <a href="login.php"><li class="navBarEles"><button class="loginBtn">Login/Signup</button></li></a>  
        </ul>
        <img src="images/menu-svgrepo-com.svg" alt="Menu Button" class="menuBtn">
     </nav>
 
     <nav class="navigationBarPhn">
         <div class="closeBtn">
-            <img src="images/close-svgrepo-com.svg" alt="Cart">
+            <a href="cart.php"><img src="images/close-svgrepo-com.svg" alt="Cart"></a>
+            <a href="login.php"><li class="navBarEles"><button class="loginBtn">Login/Signup</button></li></a>
             <h1 class="closeText">close</h1>
         </div>
         <ul class="navBarElesCollectionPhn">
-             <li class="navBarElesPhn">Shop</li>
-             <li class="navBarElesPhn">About</li>
-             <li class="navBarElesPhn">Contact</li>
+        <a href="index.php"><li class="navBarElesPhn">Home</li></a>
+        <a href="about.php"><li class="navBarElesPhn">About</li></a>
+        <a href="about.php#contactUs"><li class="navBarElesPhn">Contact</li></a>
         </ul>
      </nav>
     </header>
+
 
     <section class="shopLandingCard">
     <div class="landingEles">
@@ -44,15 +45,15 @@
         <div class="landingOptions">
             <h3 class="whatToShopText">What do you want to shop?</h3>
             <div class="landingCategories">
-                <button>Uniforms</button>
-                <button>Essentials</button>
-                <button>Books</button>
+                <a href="shop.php#uniforms"><button>Uniforms</button></a>
+                <a href="shop.php#essentials"><button>Essentials</button></a>
+                <a href="shop.php#books"><button>Books</button></a>
             </div>
         </div>
     </div>
     </section>
 
-    <div class="title">
+    <div class="title" id="uniforms">
         <h1 class="bigText">UNIFORMS</h1>
         <h2 class="smallText">STYLE UP WITH OUR EXCLUSIVE UNIFORMS</h2>
     </div>
@@ -80,7 +81,7 @@
                         <h3 class="proPrice"> ₹<?php echo $proPrice ?></h3>
                     </div>
                     <div class="cartIconDiv">
-                        <img src="images/cart-shopping-solid.svg" alt="Cart icon" class="cartIcon">
+                    <a href="cart.php?proCode=<?php echo $proDetails['proCode'] ?>"><img src="images/cart-shopping-solid.svg" alt="Cart icon" class="cartIcon"></a>
                     </div>
                 </div>
             </div>    
@@ -91,7 +92,7 @@
         ?>    
         </section>
 
-        <div class="title">
+        <div class="title" id="essentials">
         <h1 class="bigText">ESSENTIALS</h1>
         <h2 class="smallText">COLLEGE NEEDS AT ONE SPOT</h2>
     </div>
@@ -119,7 +120,7 @@
                         <h3 class="proPrice"> ₹<?php echo $proPrice ?></h3>
                     </div>
                     <div class="cartIconDiv">
-                        <img src="images/cart-shopping-solid.svg" alt="Cart icon" class="cartIcon">
+                    <a href="cart.php?proCode=<?php echo $proDetails['proCode'] ?>"><img src="images/cart-shopping-solid.svg" alt="Cart icon" class="cartIcon"></a>
                     </div>
                 </div>
             </div>    
@@ -130,7 +131,7 @@
         ?>    
         </section>
 
-        <div class="title">
+        <div class="title" id="books">
         <h1 class="bigText">BOOKS</h1>
         <h2 class="smallText">DIVE INTO THE PAGES THAT INSPIRE, IMAGINE, AND CREATE </h2>
     </div>
@@ -158,7 +159,7 @@
                         <h3 class="proPrice"> ₹<?php echo $proPrice ?></h3>
                     </div>
                     <div class="cartIconDiv">
-                        <img src="images/cart-shopping-solid.svg" alt="Cart icon" class="cartIcon">
+                    <a href="cart.php?proCode=<?php echo $proDetails['proCode'] ?>"><img src="images/cart-shopping-solid.svg" alt="Cart icon" class="cartIcon"></a>
                     </div>
                 </div>
             </div>    

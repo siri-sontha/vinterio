@@ -1,3 +1,34 @@
+<?php
+
+include 'config.php';
+
+// Check if 'slno' is provided in the URL
+if (isset($_GET['proCode']) && !empty($_GET['proCode'])) {
+    $id = intval($_GET['proCode']); // Sanitize input as an integer
+
+    // Use a prepared statement to prevent SQL injection
+    $stmt = $con->prepare("SELECT * FROM `union`.`productstable` WHERE proCode = ?");
+    $stmt->bind_param("s", $id); // Bind $id as an integer
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $proName = $row['proName'];
+        $proPrice = $row['proPrice'];
+        $proImage = $row['proImage'];
+
+	} else {
+		echo "No product found with the given ID.";
+	}
+
+	$stmt->close(); // Close the prepared statement
+} else {
+	echo "Invalid or missing product ID.";
+}
+
+?>
+
 <!-- Sri Krishna -->
 <!DOCTYPE html>
 <html lang="en">
@@ -9,14 +40,14 @@
 </head>
 <body>
 
-    <header>
+<header>
     <nav class="navigationBar">
        <img src="images/logo4.png" alt="UNION" class="logo">
        <ul class="navBarElesCollection">
+            <a href="index.php"><li class="navBarEles">Home</li></a>
             <a href="shop.php"><li class="navBarEles">Shop</li></a>
             <a href="about.php"><li class="navBarEles">About</li></a>
             <a href="about.php#contactUs"><li class="navBarEles">Contact</li></a>
-            <a href="cart.php"><li class="navBarEles"><img src="images/shopping-cart-svgrepo-com.svg" alt="Cart" class="cartNavLogo"></li></a>
             <a href="login.php"><li class="navBarEles"><button class="loginBtn">Login/Signup</button></li></a>  
        </ul>
        <img src="images/menu-svgrepo-com.svg" alt="Menu Button" class="menuBtn">
@@ -24,11 +55,11 @@
 
     <nav class="navigationBarPhn">
         <div class="closeBtn">
-            <a href="cart.php"><img src="images/close-svgrepo-com.svg" alt="Cart"></a>
             <a href="login.php"><li class="navBarEles"><button class="loginBtn">Login/Signup</button></li></a>
             <h1 class="closeText">close</h1>
         </div>
         <ul class="navBarElesCollectionPhn">
+        <a href="index.php"><li class="navBarElesPhn">Home</li></a>
         <a href="shop.php"><li class="navBarElesPhn">Shop</li></a>
         <a href="about.php"><li class="navBarElesPhn">About</li></a>
         <a href="about.php#contactUs"><li class="navBarElesPhn">Contact</li></a>
@@ -36,64 +67,39 @@
      </nav>
     </header>
 
-    <section class="sectionOne">
-        <div class="text">
-            <h1>UNION FLASH SALE</h1>
-            <h2>STUDENT SUPPLIES AT YOUR DOOR STEP</h1>
-            <button>SHOP NOW</button>
+    <div class="proRow">
+        
+        <div class="proRowImg"><img src="proImages/<?php echo $proImage ?>" class="cartProImg"></div>
+        <div class="proRowDetails">
+          <h1 class="proRowName"><?php echo $proName ?></h1>
+          <h1 class="proRowPrice">$<?php echo $proPrice ?></h1>
+          <div class="sizeQtyFlex">
+                <div class="proRowSize">Size:S</div>
+                <div class="proRowQty">Qty:1</div>
+          </div>
         </div>
+    
+    </div>
 
-        <div class="image">
-            <img src="images/uniformGirlimage.png" alt="Image" class="image">
+    <div class="payDetails">
+        <h1 class="payTitle">PAYMENT DETAILS</h1>
+        <div class="cartAmt">
+            <h1 class="cartAmtTxt">Cart Amount</h1>
+            <h1 class="cartAmtTxt">$<?php echo $proPrice ?></h1>
         </div>
-    </section>
+        <div class="cartAmt">
+            <h1 class="cartAmtTxt">Shipping</h1>
+            <h1 class="cartAmtTxt">FREE</h1>
+        </div>
+        <div class="cartAmt">
+            <h1 class="cartAmtTxt">Total</h1>
+            <h1 class="cartAmtTxt">$<?php echo $proPrice ?></h1>
+        </div>
+    </div>
+
 
     <div class="title">
-        <h1 class="bigText">FEATURES</h1>
-        <h2 class="smallText">REASONS WHY YOU WILL ENJOY SHOPPING FROM US</h2>
-    </div>
-
-    <section class="sectionTwo">
-
-    <div class="featureCard">
-        <img src="images/f2.png" alt="Online Order">
-        <div class="featureTitleOne">
-            <h2 class="featureTitleText">Online Order</h2>
-        </div>
-    </div>
-
-    <div class="featureCard">
-        <img src="images/f7.png" alt="Online Order">
-        <div class="featureTitleTwo">
-            <h2 class="featureTitleText">Save Money</h2>
-        </div>
-    </div>
-
-    <div class="featureCard">
-        <img src="images/f4.png" alt="Online Order">
-        <div class="featureTitleThree">
-            <h2 class="featureTitleText">Super Offers</h2>
-        </div>
-    </div>
-
-    <div class="featureCard">
-        <img src="images/f5.png" alt="Online Order">
-        <div class="featureTitleFour">
-            <h2 class="featureTitleText">Happy Sell</h2>
-        </div>
-    </div>
-
-    <div class="featureCard">
-        <img src="images/f6.png" alt="Online Order">
-        <div class="featureTitleFive">
-            <h2 class="featureTitleText">24/7 Support</h2>
-        </div>
-    </div>
-
-    </section>
-
-    <div class="title">
-        <h1 class="bigText">OUR PRODUCTS</h1>
+        <h1 class="bigText">OUR OTHER PRODUCTS</h1>
         <h2 class="smallText">HOT DEALS YOU CAN'T MISS ON UNION</h2>
     </div>
 
@@ -129,8 +135,6 @@
         }
     }
     ?>    
-
-
 
     </section>
 

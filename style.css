@@ -868,8 +868,90 @@ li{
     }
 }
 
-
-
 /* END ---------- SINGLEPROPAGE.PHP */
+
+/* START ---------- CART.PHP */ 
+
+.proRow{
+    background-color: #ffffff;
+    margin: 8% 3% 8% 3%;
+    border-radius: 0.6rem;
+    border: 0.0001rem solid grey;
+    padding: 2% 3%;
+    display: flex;
+    gap: 4%;
+}
+
+.proRowImg{
+    max-width: 160px;  
+}
+
+.proRowImg img{
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
+
+.proRowName{
+    color: #5f5f5f;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: clamp(0.875rem, 3.5vw, 1.5rem);
+}
+
+.proRowPrice{
+    color: black;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
+}
+
+.proRowSize{
+    background-color: #c6e2e7;
+    color: black;
+    font-weight: 300;
+    font-size: clamp(0.6rem, 2.5vw, 1.2rem);
+    padding: 3% 5%;
+    border-radius: 0.3rem;
+    
+}
+
+.proRowQty{
+    background-color: #c6e2e7;
+    color: black;
+    font-weight: 300;
+    font-size: clamp(0.6rem, 2.5vw, 1.2rem);
+    padding: 3% 5%;
+    border-radius: 0.3rem;
+}
+
+.sizeQtyFlex{
+    display: flex;
+    gap: 4%;
+}
+
+.payDetails{
+   margin: 0 0 8% 3%;
+}
+
+.cartAmt{
+    display: flex;
+    justify-content: space-between;
+    max-width: 40%;
+}
+
+.payTitle{
+    color: #5f5f5f;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: clamp(1.25rem, 4.5vw, 2.5rem);
+}
+
+.cartAmtTxt{
+    color: #5f5f5f;
+    font-weight: 600;
+    font-size: clamp(0.6rem, 3.4vw, 1.5rem);
+}
+
+/* END ---------- CART.PHP */
 
 /* Sri Krishna */

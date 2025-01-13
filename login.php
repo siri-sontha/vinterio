@@ -55,28 +55,27 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     <nav class="navigationBar">
        <img src="images/logo4.png" alt="UNION" class="logo">
        <ul class="navBarElesCollection">
-            <li class="navBarEles">Shop</li>
-            <li class="navBarEles">About</li>
-            <li class="navBarEles">Contact</li>
-            <li class="navBarEles"><img src="images/shopping-cart-svgrepo-com.svg" alt="Cart" class="cartNavLogo"></li>
-            <li class="navBarEles"><button class="loginBtn">Login/Signup</button></li>
-            
+            <a href="shop.php"><li class="navBarEles">Shop</li></a>
+            <a href="about.php"><li class="navBarEles">About</li></a>
+            <a href="about.php#contactUs"><li class="navBarEles">Contact</li></a>
+            <a href="cart.php"><li class="navBarEles"><img src="images/shopping-cart-svgrepo-com.svg" alt="Cart" class="cartNavLogo"></li></a>
        </ul>
        <img src="images/menu-svgrepo-com.svg" alt="Menu Button" class="menuBtn">
     </nav>
 
     <nav class="navigationBarPhn">
         <div class="closeBtn">
-            <img src="images/close-svgrepo-com.svg" alt="Cart">
+            <a href="cart.php"><img src="images/close-svgrepo-com.svg" alt="Cart"></a>
             <h1 class="closeText">close</h1>
         </div>
         <ul class="navBarElesCollectionPhn">
-             <li class="navBarElesPhn">Shop</li>
-             <li class="navBarElesPhn">About</li>
-             <li class="navBarElesPhn">Contact</li>
+        <a href="shop.php"><li class="navBarElesPhn">Shop</li></a>
+        <a href="about.php"><li class="navBarElesPhn">About</li></a>
+        <a href="about.php#contactUs"><li class="navBarElesPhn">Contact</li></a>
         </ul>
      </nav>
     </header>
+
 
 	<section class="loginOrSignup">
         
