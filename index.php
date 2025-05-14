@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>UNION-Home</title>
 </head>
 <body>
 
     <header>
     <nav class="navigationBar">
-       <img src="images/logo4.png" alt="UNION" class="logo">
+       <h1>v interio</h1>
        <ul class="navBarElesCollection">
             <a href="shop.php"><li class="navBarEles">Shop</li></a>
             <a href="about.php"><li class="navBarEles">About</li></a>
             <a href="about.php#contactUs"><li class="navBarEles">Contact</li></a>
-            <a href="cart.php"><li class="navBarEles"><img src="images/shopping-cart-svgrepo-com.svg" alt="Cart" class="cartNavLogo"></li></a>
+            <a href="cart.php"><li class="navBarEles"><i class="fa-solid fa-cart-shopping fa-sm" style="color: black;" class="cartNavLogo"></i></li></a>
             <a href="login.php"><li class="navBarEles"><button class="loginBtn">Login/Signup</button></li></a>  
        </ul>
        <img src="images/menu-svgrepo-com.svg" alt="Menu Button" class="menuBtn">
@@ -37,56 +38,49 @@
     </header>
 
     <section class="sectionOne">
-        <div class="text">
-            <h1>UNION FLASH SALE</h1>
-            <h2>STUDENT SUPPLIES AT YOUR DOOR STEP</h1>
-            <button>SHOP NOW</button>
-        </div>
-
-        <div class="image">
-            <img src="images/uniformGirlimage.png" alt="Image" class="image">
-        </div>
+            <img src="images/vinterio.jpg" alt="Image" class="image">
+            <button>shop now</button>
     </section>
 
     <div class="title">
         <h1 class="bigText">FEATURES</h1>
-        <h2 class="smallText">REASONS WHY YOU WILL ENJOY SHOPPING FROM US</h2>
+        <h2 class="smallText">WHY CUSTOMERS ALWAYS LOVE TO SHOP FROM US?</h2>
     </div>
 
     <section class="sectionTwo">
 
     <div class="featureCard">
-        <img src="images/f2.png" alt="Online Order">
-        <div class="featureTitleOne">
-            <h2 class="featureTitleText">Online Order</h2>
+        <img src="images/f2.png">
+        <div>
+            <h2>Easy Purchase</h2>
         </div>
     </div>
 
     <div class="featureCard">
-        <img src="images/f7.png" alt="Online Order">
-        <div class="featureTitleTwo">
-            <h2 class="featureTitleText">Save Money</h2>
+        <img src="images/f7.png">
+        <div>
+            <h2>Super Discounts</h2>
         </div>
     </div>
 
     <div class="featureCard">
-        <img src="images/f4.png" alt="Online Order">
-        <div class="featureTitleThree">
-            <h2 class="featureTitleText">Super Offers</h2>
+        <img src="images/f4.png">
+        <div>
+            <h2>Latest Collections</h2>
         </div>
     </div>
 
     <div class="featureCard">
-        <img src="images/f5.png" alt="Online Order">
-        <div class="featureTitleFour">
-            <h2 class="featureTitleText">Happy Sell</h2>
+        <img src="images/f5.png">
+        <div>
+            <h2>Quality Products</h2>
         </div>
     </div>
 
     <div class="featureCard">
-        <img src="images/f6.png" alt="Online Order">
-        <div class="featureTitleFive">
-            <h2 class="featureTitleText">24/7 Support</h2>
+        <img src="images/f6.png">
+        <div>
+            <h2>24/7 Support</h2>
         </div>
     </div>
 
@@ -101,7 +95,7 @@
 
     <?php
     include 'config.php';
-    $display_pro = mysqli_query($con, "SELECT * FROM `union`.`productstable` LIMIT 8");
+    $display_pro = mysqli_query($con, "SELECT * FROM `union`.`productstable` LIMIT 10");
     if(mysqli_num_rows($display_pro)>0){
 
         while($proDetails = mysqli_fetch_assoc($display_pro)){
