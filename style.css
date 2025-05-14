@@ -27,13 +27,15 @@
     padding : 0;
     margin : 0;
     box-sizing : border-box;
-    color:rgb(30, 29, 29);
+    color:rgb(0, 0, 0);
     font-family : "Source Sans 3", serif;
     font-style : normal;
 }
 
 body{
-    background-color : black;
+    background-color :  rgb(0, 0, 0);
+    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.93), rgb(63, 61, 61), rgba(0, 0, 0, 0.93)); */
+    /* background: linear-gradient(to bottom, goldenrod, rgb(224, 192, 15), gold, goldenrod); */
     padding : 0;
     margin : 0;
 }
@@ -73,16 +75,15 @@ li{
 /* START --- INDEX.PHP */
 
 .navigationBar{
-    /* background: linear-gradient(to right, #bf953f, #fcf6ba, #fcf6ba, #bf953f); */
-    background: linear-gradient(to bottom, goldenrod, gold, gold , goldenrod);
+    background-color: transparent;
     max-width: 100%;
     display:flex;
     align-items: center;
-    padding: 0.5rem 1.5rem;
-    margin: 1rem 2.2rem;
-    border: 0.09rem solid white;
-    box-shadow: 0px 0px 0.5rem gold;
-    border-radius: 2rem;
+    padding: 0.6rem 1.5rem;
+    margin: 0rem 0 2.2rem 0 ;
+    border-bottom: 0.01rem solid gold;
+    box-shadow: 0px 0px 1rem #daa520;
+    
 }
 
 .navigationBar h1{
@@ -91,7 +92,6 @@ li{
     font-family: "Prata", serif;
     font-weight: 1000;
     font-style: normal;
-    text-shadow: 2px 2px 2rem white;
     text-transform: uppercase;
 
 }
@@ -107,7 +107,7 @@ li{
 .navBarEles{
     font-size: 1rem;
     font-weight: 400;
-    color: black;
+    color: white;
 }
 
 .loginBtn{
@@ -175,19 +175,52 @@ li{
 
 .sectionOne{
     max-width: 100%;
-    max-height: 29rem;
+    height: 27rem;
     margin: 3.5rem 3rem;
     border-radius:1rem;
     border: 0.019rem solid white;
     box-shadow: 0px 0px 1.5rem goldenrod;
     position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
 .sectionOne img{
-    width: 100%;
-    max-height: 29rem;
-    border-radius:1rem;
+    width: 38rem;
+    max-height: 100%;
+    border-radius:0 1rem 1rem 0;
     border: 0.015rem solid goldenrod;
+    box-shadow: -8px 0px 0.8rem goldenrod;
+}
+
+.sectionOne p:nth-of-type(1){
+    margin: 3.5rem 3.5rem 1rem 3.5rem;
+    color: goldenrod;
+    font-size: 3rem;
+    font-family: "Prata", serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.sectionOne p:nth-of-type(2){
+    margin: 0 3.5rem 2.5rem 3.5rem; 
+    color: goldenrod;
+    font-size: 1.5rem;
+    font-family: "Prata", serif;
+    font-weight: 900;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.sectionOne p:nth-of-type(3), .sectionOne p:nth-of-type(4){
+    margin: 0 3.5rem 1rem 3.5rem;
+    color: rgb(223, 207, 207);
+    font-size: 0.7rem;
+    font-family: "Prata", serif;
+    font-weight: 200;
+    font-style: normal;
+    text-transform: uppercase;
 }
 
 .sectionOne button{
@@ -195,19 +228,17 @@ li{
     font-family: "Sorts Mill Goudy", serif;
     font-weight: 500;
     color: white;
-    padding: 0.25rem 3rem;
+    padding: 0.1rem 2rem;
     border: none;
     border-radius: 2rem;
-    border: 0.08rem solid white;
+    border: 0.08rem solid gold;
     font-size: 1.8rem;
     white-space: nowrap;
     position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-70%, -50%);
-    box-shadow: 0px 0px 0.6rem white;
+    box-shadow: 0px 0px 0.6rem gold;
+    margin: 1rem 3.5rem;
+} 
 
-}
 
 .title{
    text-align: center;
@@ -291,42 +322,46 @@ li{
 }
 
 .cartIcon{
-    width: 45px;
-    height: 45px;
-    background-color: #e5c1cd;
-    padding: 0.3rem;
-    right: 1rem;
-    bottom: 0.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 0.1rem black;
+    padding: 0.35rem;
+    right: 0.8rem;
+    bottom: 0.8rem;
     position: absolute;
     border-radius: 0.3rem;
-    border: 0.001rem solid grey;
+    border: 0.001rem solid GREY;
 }
 
 .brand{
-    font-size: 18px;
-    font-weight: 200;
+    font-size: 0.8rem;
+    font-weight: 400;
     line-height: 0;
     padding: 0 0 1rem 0.5rem;
+    color: #2C2C2C;
 }
 
 .proName{
-    font-size: 20px;
+    font-size: 0.8rem;
     font-weight: 700;
     line-height: 0;
     padding: 0 0 1.2rem 0.5rem;
+    color: #2C2C2C;
 }
 
 .proPrice{
-    font-size: 35px;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 700;
     line-height: 0;
     padding: 0 0 1rem 0.5rem;
+    color: #2C2C2C;
 }
 
 .last-sec{
     max-width:100%;
-    background-color: #cde5d9;
-    padding:2% 2%;
+    background: linear-gradient(to bottom, goldenrod, gold, gold, goldenrod);
+    padding:1.5rem 0.5rem;
     display:flex;
     justify-content: center;
     justify-content: space-evenly;
@@ -335,7 +370,7 @@ li{
 
 .cnt-txt{
     color:black;
-    font-size: clamp(0.2rem, 2vw, 0.8rem);
+    font-size: 0.8rem;
     font-weight: 400;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
@@ -343,7 +378,7 @@ li{
 
 .cnt-txt1{
     color: black;
-    font-size: clamp(0.1rem, 2vw, 2.5rem);
+    font-size: 1.4rem;
     font-weight: 1000;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 
@@ -726,12 +761,12 @@ li{
 
 .proDetailsSingle{
     display:flex;
-    margin:8% 2% 8% 2%;
+    margin: 4rem 2.5rem 0rem 2.5rem;
 }
 
 .proImgDivSingle{
     max-width:40%;
-    margin:0 2% 10% 0%;
+    margin:0 6rem 5rem 0;
 }
 
 @media screen and (max-width:31.25em){
@@ -744,113 +779,92 @@ li{
 }
 
 .proImgSingle{
-    width:100%;
-    border-radius:5%;
-    border:0.01rem solid grey;
-    box-shadow:3px 3px 5px grey;
-    margin:0 0 2% 0;
+    width: 26rem;
+    border-radius: 1.2rem;
+    border: 2px solid gold;
+    box-shadow:0px 0px 1.5rem goldenrod;
+    margin:0 0 1.5rem 0;
 }
 
 .proDescDivSingle{
     display:flex;
     flex-direction: column;
-    gap:1%;
+    gap: 0.6rem;
     margin:0 0 0 0%;
 
 }
 
 .proNameSingle{
-    font-size: clamp(2rem, 6vw, 4rem);
-    color: #5f5f5f;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 800;
+    text-transform: capitalize;
 }
 
 .proPriceSingle{
-    font-size: clamp(2rem, 6vw, 4rem);
-    color:#5f5f5f;
-    font-weight: 700;
+    font-size: 3rem;
+    color: goldenrod;
+    font-weight: 800;
 
 }
 
-.proSizes{
+.rating{
     display:flex;
-    gap:2%;
-}
-
-.size1{
-    width:clamp(2rem, 4vw, 80rem);
-    height: 1.5rem;
-    background-color: #c6e2e7;
-    color: #5f5f5f;
-    border-radius:20%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    padding:0 0.2%;
-    font-size: clamp(0.8rem, 2.5vw, 1.5rem);
-    font-weight: 400;
-    border: 0.001rem solid grey;
-    text-transform: uppercase;
+    gap: 0.5rem;
 }
 
 .proQtySingle{
-    width:clamp(3rem, 6vw, 15rem);
+    width: 5rem;
     height: 4.5;
-    border: 0.0001rem solid grey;
-    background-color: #c6e2e7;
-    border-radius:1vh;
+    border: 0.001rem solid gold;
+    box-shadow: 0px 0px 0.5rem goldenrod;
+    background-color: goldenrod;
+    border-radius: 0.2rem;
     text-align: center;
-    font-size: clamp(1rem, 1vw, 40rem);
+    font-size: 1rem;
     padding: 0.5rem;
-    margin:3% 0 1% 0;
+    margin: 1rem 0.6rem 1rem 0;
 }
 
 .proCartSingle{
-    border: 0.0001rem solid grey;
-    border-radius: 1vh;
-    background-color: #c6e2e7;
-    width:clamp(9rem, 15vw, 15rem);
+    border: 0.001rem solid gold;
+    box-shadow: 0px 0px 0.5rem goldenrod;
+    border-radius: 0.2rem;
+    background-color: goldenrod;
+    width: 9rem;
     height: 2.5rem;
-    font-size: clamp(1rem, 2vw, 40rem);
-    margin:0 2%;
-    padding:1%;
+    font-size: 1rem;
     text-align: center;
     margin:1% 0;
-    color: #5f5f5f;
-    font-weight: 400;
-}
-
-.proCartSingle:hover, .proQtySingle:hover, .size1:hover{
-    background-color: #B6B4C2;
+    font-weight: 600;
 }
 
 .detailsSingle{
-    font-size: clamp(1rem, 4vw, 2rem);
-    color: #5f5f5f;
+    font-size: 2rem;
+    color: white;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .proDescSingle{
-    font-size: clamp(0.8rem, 2.5vw, 1.2rem);
-    color: #5f5f5f;
+    font-size: 1.2rem;
+    color: white;
     font-weight: 500;
 
 }
 
-.imgOne,.imgTwo,.imgThree{
-    width:30%;
-    margin:1% 2% 3% 0%;
-    border-radius: 2vh;
-    border:1px solid grey;
-    box-shadow:2px 2px 4px grey;
+.changeImgSingle{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 0.2rem;
 }
 
-@media screen and (max-width:50em){
-    .imgOne,.imgTwo,.imgThree{
-        margin:1% 2% 3% 0%;
-    }
+.imgOne,.imgTwo,.imgThree{
+    width: 7.8rem;
+    border-radius: 0.8rem;
+    border:1px solid gold;
+    box-shadow:0px 0px 0.8rem goldenrod;
 }
 
 /* END ---------- SINGLEPROPAGE.PHP */
@@ -877,36 +891,26 @@ li{
 }
 
 .proRowName{
-    color: #5f5f5f;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: clamp(0.875rem, 3.5vw, 1.5rem);
+    font-size: 1.4rem;
 }
 
 .proRowPrice{
     color: black;
     text-transform: uppercase;
     font-weight: 800;
-    font-size: clamp(1rem, 3.5vw, 1.5rem);
+    font-size: 1.4rem;
 }
 
-.proRowSize{
-    background-color: #c6e2e7;
+.proRowSize, .proRowQty{
+    background-color: goldenrod;
     color: black;
-    font-weight: 300;
-    font-size: clamp(0.6rem, 2.5vw, 1.2rem);
+    font-weight: 400;
+    font-size: 1.2rem;
     padding: 3% 5%;
     border-radius: 0.3rem;
 
-}
-
-.proRowQty{
-    background-color: #c6e2e7;
-    color: black;
-    font-weight: 300;
-    font-size: clamp(0.6rem, 2.5vw, 1.2rem);
-    padding: 3% 5%;
-    border-radius: 0.3rem;
 }
 
 .sizeQtyFlex{
@@ -925,16 +929,16 @@ li{
 }
 
 .payTitle{
-    color: #5f5f5f;
+    color: white;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: clamp(1.25rem, 4.5vw, 2.5rem);
+    font-size: 2rem;
 }
 
 .cartAmtTxt{
-    color: #5f5f5f;
+    color: white;
     font-weight: 600;
-    font-size: clamp(0.6rem, 3.4vw, 1.5rem);
+    font-size: 1.6rem;
 }
 
 /* END ---------- CART.PHP */

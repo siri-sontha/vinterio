@@ -40,14 +40,14 @@ if (isset($_GET['proCode']) && !empty($_GET['proCode'])) {
 </head>
 <body>
 
-<header>
+ <header>
     <nav class="navigationBar">
-       <img src="images/logo4.png" alt="UNION" class="logo">
+       <h1>v interio</h1>
        <ul class="navBarElesCollection">
-            <a href="index.php"><li class="navBarEles">Home</li></a>
             <a href="shop.php"><li class="navBarEles">Shop</li></a>
             <a href="about.php"><li class="navBarEles">About</li></a>
             <a href="about.php#contactUs"><li class="navBarEles">Contact</li></a>
+            <a href="cart.php"><li class="navBarEles"><i class="fa-solid fa-cart-shopping fa-sm" style="color: black;" class="cartNavLogo"></i></li></a>
             <a href="login.php"><li class="navBarEles"><button class="loginBtn">Login/Signup</button></li></a>  
        </ul>
        <img src="images/menu-svgrepo-com.svg" alt="Menu Button" class="menuBtn">
@@ -55,11 +55,11 @@ if (isset($_GET['proCode']) && !empty($_GET['proCode'])) {
 
     <nav class="navigationBarPhn">
         <div class="closeBtn">
-            <a href="login.php"><li class="navBarEles"><button class="loginBtn">Login/Signup</button></li></a>
+            <a href="cart.php"><i class="fa-solid fa-cart-shopping fa-sm" style="color: black;" class="cartNavLogo"></i></a>
+            <a href="login.php"><button class="loginBtn">Login/Signup</button></a>
             <h1 class="closeText">close</h1>
         </div>
         <ul class="navBarElesCollectionPhn">
-        <a href="index.php"><li class="navBarElesPhn">Home</li></a>
         <a href="shop.php"><li class="navBarElesPhn">Shop</li></a>
         <a href="about.php"><li class="navBarElesPhn">About</li></a>
         <a href="about.php#contactUs"><li class="navBarElesPhn">Contact</li></a>

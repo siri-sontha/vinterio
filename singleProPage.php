@@ -6,20 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Products</title>
 </head>
 <body class="body">
 
-<header>
+ <header>
     <nav class="navigationBar">
-       <img src="images/logo4.png" alt="UNION" class="logo">
+       <h1>v interio</h1>
        <ul class="navBarElesCollection">
-            <a href="index.php"><li class="navBarEles">Home</li></a>
             <a href="shop.php"><li class="navBarEles">Shop</li></a>
             <a href="about.php"><li class="navBarEles">About</li></a>
             <a href="about.php#contactUs"><li class="navBarEles">Contact</li></a>
-            <a href="cart.php"><li class="navBarEles"><img src="images/shopping-cart-svgrepo-com.svg" alt="Cart" class="cartNavLogo"></li></a>
+            <a href="cart.php"><li class="navBarEles"><i class="fa-solid fa-cart-shopping fa-sm" style="color: black;" class="cartNavLogo"></i></li></a>
             <a href="login.php"><li class="navBarEles"><button class="loginBtn">Login/Signup</button></li></a>  
        </ul>
        <img src="images/menu-svgrepo-com.svg" alt="Menu Button" class="menuBtn">
@@ -27,12 +26,11 @@
 
     <nav class="navigationBarPhn">
         <div class="closeBtn">
-            <a href="cart.php"><img src="images/close-svgrepo-com.svg" alt="Cart"></a>
-            <a href="login.php"><li class="navBarEles"><button class="loginBtn">Login/Signup</button></li></a>
+            <a href="cart.php"><i class="fa-solid fa-cart-shopping fa-sm" style="color: black;" class="cartNavLogo"></i></a>
+            <a href="login.php"><button class="loginBtn">Login/Signup</button></a>
             <h1 class="closeText">close</h1>
         </div>
         <ul class="navBarElesCollectionPhn">
-        <a href="index.php"><li class="navBarElesPhn">Home</li></a>
         <a href="shop.php"><li class="navBarElesPhn">Shop</li></a>
         <a href="about.php"><li class="navBarElesPhn">About</li></a>
         <a href="about.php#contactUs"><li class="navBarElesPhn">Contact</li></a>
@@ -76,12 +74,12 @@
 	<div class="proDescDivSingle">
 		<h1 class="proNameSingle"><?php echo $proName ?></h1>
 		<h1 class="proPriceSingle">₹<?php echo $proPrice ?></h1>
-		<div class="proSizes">
-			<p class="size1">XS</p>			
-			<p class="size1">S</p>	
-			<p class="size1">M</p>	
-			<p class="size1">L</p>
-			<p class="size1">XL</p>
+		<div class="rating">
+			<i class="fa-solid fa-star fa-lg" style="color: #FFD43B;"></i>			
+			<i class="fa-solid fa-star fa-lg" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #FFD43B;"></i>
+            <i class="fa-solid fa-star fa-lg" style="color: #FFD43B;"></i>
 		</div>
 		<div class="proQtyCartSingle">
 			<input type="number" value="1" class="proQtySingle" id="qtyField">
@@ -112,7 +110,7 @@ echo "problem";
 	</section>
 
     <div class="title">
-        <h1 class="bigText">MORE PRODUCTS</h1>
+        <h1 class="bigText">RECOMMENDED</h1>
         <h2 class="smallText">HOT DEALS YOU CAN'T MISS ON UNION</h2>
     </div>
 

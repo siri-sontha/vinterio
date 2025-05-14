@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <header>
+<header>
     <nav class="navigationBar">
        <h1>v interio</h1>
        <ul class="navBarElesCollection">
@@ -25,8 +25,8 @@
 
     <nav class="navigationBarPhn">
         <div class="closeBtn">
-            <a href="cart.php"><img src="images/close-svgrepo-com.svg" alt="Cart"></a>
-            <a href="login.php"><li class="navBarEles"><button class="loginBtn">Login/Signup</button></li></a>
+            <a href="cart.php"><i class="fa-solid fa-cart-shopping fa-sm" style="color: black;" class="cartNavLogo"></i></a>
+            <a href="login.php"><button class="loginBtn">Login/Signup</button></a>
             <h1 class="closeText">close</h1>
         </div>
         <ul class="navBarElesCollectionPhn">
@@ -36,10 +36,22 @@
         </ul>
      </nav>
     </header>
+    
 
-    <section class="sectionOne">
+    <!-- <section class="sectionOne">
             <img src="images/vinterio.jpg" alt="Image" class="image">
             <button>shop now</button>
+    </section> -->
+
+    <section class="sectionOne">
+        <div>
+            <p>v interio</p>
+            <p>perfect interior decor store</p>
+            <p>give your home a new look by adding our luxurious show pieces and aesthetic decors</p>
+            <p>order online or visit the store now</p>
+            <button>shop now</button>
+        </div>    
+            <img src="images/v2.jpg" alt="Image" class="image">     
     </section>
 
     <div class="title">
@@ -109,7 +121,7 @@
              <img src="proImages/<?php echo $proImg ?>" alt="Product" class="proImage">
             <div class="proDesc">
                 <div class="proDetails">
-                    <h1 class="brand">Shree Medha</h1>
+                    <h1 class="brand">VINTERIO</h1>
                     <h2 class="proName"><?php echo $proName ?></h2>
                     <h3 class="proPrice"> ₹<?php echo $proPrice ?></h3>
                 </div>
@@ -132,9 +144,9 @@
 
         <div class="contact">
             <h3 class="cnt-txt1">Contact</h3>
-            <h4 class="cnt-txt"><strong>Address:</strong> SMDC, Fort Road, Bellary</h4>
+            <h4 class="cnt-txt"><strong>Address:</strong>Basweshwar Nagar 1st Cross, Bellary</h4>
             <h4 class="cnt-txt"><strong>Phone:</strong> +91 0000000000</h4>
-            <h4 class="cnt-txt"><strong>Hours:</strong> 8:30 to 4:30, Mon-Sat</h4>
+            <h4 class="cnt-txt"><strong>Hours:</strong> 9:00 to 8:00, Mon-Sat</h4>
             <div class="uni-onLogo">
             <img alt="Uni-On" src="images/logo4.png" class="Uni-ON">
             </div>
@@ -147,7 +159,7 @@
             <h4 class="cnt-txt"><a href="#">Privacy Policy</a></h4>
             <h4 class="cnt-txt"><a href="#">Terms & Conditions</a></h4>
             <h4 class="cnt-txt"><a href="#">Contact Us</a></h4>
-            <h3 class="cnt-txt2">@2024, UNION, SMDC</h3>
+            <h3 class="cnt-txt2">@2025, VINTERIO</h3>
         </div>
 
         <div class="acc">

@@ -88,33 +88,32 @@ if(isset($_POST['addPro'])){
 </head>
 <body class="body">
 
-<header>
+ <header>
     <nav class="navigationBar">
-       <img src="images/logo4.png" alt="UNION" class="logo">
+       <h1>v interio</h1>
        <ul class="navBarElesCollection">
-            <li class="navBarEles">Shop</li>
-            <li class="navBarEles">About</li>
-            <li class="navBarEles">Contact</li>
-            <li class="navBarEles"><img src="images/shopping-cart-svgrepo-com.svg" alt="Cart" class="cartNavLogo"></li>
-            <li class="navBarEles"><button class="loginBtn">Login/Signup</button></li>
-            
+            <a href="shop.php"><li class="navBarEles">Shop</li></a>
+            <a href="about.php"><li class="navBarEles">About</li></a>
+            <a href="about.php#contactUs"><li class="navBarEles">Contact</li></a>
+            <a href="cart.php"><li class="navBarEles"><i class="fa-solid fa-cart-shopping fa-sm" style="color: black;" class="cartNavLogo"></i></li></a>
+            <a href="login.php"><li class="navBarEles"><button class="loginBtn">Login/Signup</button></li></a>  
        </ul>
        <img src="images/menu-svgrepo-com.svg" alt="Menu Button" class="menuBtn">
     </nav>
 
     <nav class="navigationBarPhn">
         <div class="closeBtn">
-            <img src="images/close-svgrepo-com.svg" alt="Cart">
+            <a href="cart.php"><i class="fa-solid fa-cart-shopping fa-sm" style="color: black;" class="cartNavLogo"></i></a>
+            <a href="login.php"><button class="loginBtn">Login/Signup</button></a>
             <h1 class="closeText">close</h1>
         </div>
         <ul class="navBarElesCollectionPhn">
-             <li class="navBarElesPhn">Shop</li>
-             <li class="navBarElesPhn">About</li>
-             <li class="navBarElesPhn">Contact</li>
+        <a href="shop.php"><li class="navBarElesPhn">Shop</li></a>
+        <a href="about.php"><li class="navBarElesPhn">About</li></a>
+        <a href="about.php#contactUs"><li class="navBarElesPhn">Contact</li></a>
         </ul>
      </nav>
     </header>
-
         <form action="" class="addProForm" method="post" enctype="multipart/form-data">
         <section class="addNewPro">
         <h1 class="formHeadTxt">Add Product Here</h1><h1> </h1>
