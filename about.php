@@ -1,4 +1,3 @@
-<!-- Sri Krishna -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -163,7 +162,7 @@
 
         <div class="contact">
             <h3 class="cnt-txt1">Contact</h3>
-            <h4 class="cnt-txt"><strong>Address:</strong> SMDC, Fort Road, Bellary</h4>
+            <h4 class="cnt-txt"><strong>Address:</strong> SMDC, Fort Road</h4>
             <h4 class="cnt-txt"><strong>Phone:</strong> +91 0000000000</h4>
             <h4 class="cnt-txt"><strong>Hours:</strong> 8:30 to 4:30, Mon-Sat</h4>
             <div class="uni-onLogo">
@@ -201,4 +200,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-<!-- Sri Krishna -->
